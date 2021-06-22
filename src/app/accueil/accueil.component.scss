@@ -1,0 +1,34 @@
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.img-sanding {
+  width: 100%;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../assets/tools.jpg");
+  background-position: 25%;
+  height: 100%;
+}
+
+.hero-text-container {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+
+}
+
+#hero-text {
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: initial;
+  text-transform: uppercase;
+  max-width: 35rem;
+}
