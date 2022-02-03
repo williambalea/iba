@@ -1,28 +1,19 @@
-.toolbar-spacer {
-  flex: 1 1 auto;
-}
-
-.img-sanding {
-  width: 100%;
-}
+@import "../../styles.scss";
 
 .hero {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../assets/tools.jpg");
-  background-position: 25%;
+  background-image: linear-gradient(.25turn, #000000, #00000000 ), url("../../assets/heroImages/cuisine.jpg");
   height: 100%;
+  width: 100%;
 }
 
 .hero-text-container {
   margin: auto;
   position: absolute;
-  left: 0;
-  right: 0;
   bottom: 0;
   top: 0;
   width: fit-content;
   height: fit-content;
   padding: 1rem;
-
 }
 
 #hero-text {
@@ -31,4 +22,106 @@
   line-height: initial;
   text-transform: uppercase;
   max-width: 35rem;
+  text-shadow: 0px 0px 2px #000000;
+}
+
+#hero-button {
+  line-height: 1.7rem;
+  padding: 1em;
+  font-size: 1.3rem;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+.primary {
+  color: $iba-blue-light;
+}
+
+.center {
+  text-align: center;
+}
+
+a {
+ color: inherit;
+ text-decoration: none;
+}
+
+p {
+  padding: 16px;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  padding: 1rem;
+}
+
+.footer {
+  padding: 16px;
+}
+
+.accueil-body {
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 64px;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: space-evenly;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
+.card {
+  background-color: #202020;
+  color: #fff;
+  padding: 10px;
+  box-shadow: 0px 1px 5px black;
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-icon {
+  width: 100%;
+  font-size: 100px;
+}
+
+.see-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  margin-bottom: 42px; // bugfix
+  background-color: #202020;
+  color: #fff;
+  padding: 10px;
+  box-shadow: 0px 1px 5px black;
+  border-radius: 10px;
+}
+
+.see-project:hover {
+  cursor: pointer;
+  background-color: #302f2f;
+}
+
+.contact {
+  line-height: 32px;
+  font-size: 20px;
+  max-width: fit-content;
+  margin: auto;
+  text-align: left;
+}
+
+h3 {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 16px;
 }

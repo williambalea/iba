@@ -1,0 +1,74 @@
+@import "../node_modules/@angular/material/theming";
+@include mat-core();
+
+$iba-blue: (
+    50 : #e0eaf3,
+    100 : #b3cae0,
+    200 : #80a7cc,
+    300 : #4d83b7,
+    400 : #2669a7,
+    500 : #004e98,
+    600 : #004790,
+    700 : #003d85,
+    800 : #00357b,
+    900 : #00256a,
+    A100 : #99b3ff,
+    A200 : #668dff,
+    A400 : #3367ff,
+    A700 : #1a54ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$iba-orange: (
+    50 : #ffede0,
+    100 : #ffd1b3,
+    200 : #ffb380,
+    300 : #ff954d,
+    400 : #ff7e26,
+    500 : #ff6700,
+    600 : #ff5f00,
+    700 : #ff5400,
+    800 : #ff4a00,
+    900 : #ff3900,
+    A100 : #ffffff,
+    A200 : #fff4f2,
+    A400 : #ffcabf,
+    A700 : #ffb4a6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-primary: mat-palette($iba-blue, 500);
+$my-warn: mat-palette($iba-orange, 500);
+
+$my-theme: mat-light-theme($my-primary, $my-warn);
+@include angular-material-theme($my-theme);
