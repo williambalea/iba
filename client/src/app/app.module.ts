@@ -9,12 +9,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { RejoindreComponent } from './rejoindre/rejoindre.component';
+import { KitchenSvgComponent } from '../assets/svg/kitchen/kitchen.component';
+import { doorSvgComponent } from '../assets/svg/door/door.component';
+import { sinkSvgComponent } from '../assets/svg/sink/sink.component';
+import { soumissionSvgComponent } from '../assets/svg/soumission/soumission.component';
+import { stairsSvgComponent } from '../assets/svg/stairs/stairs.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccueilComponent
+    AccueilComponent,
+    RejoindreComponent,
+    KitchenSvgComponent,
+    doorSvgComponent,
+    sinkSvgComponent,
+    soumissionSvgComponent,
+    stairsSvgComponent,
   ],
   imports: [
     BrowserModule,
