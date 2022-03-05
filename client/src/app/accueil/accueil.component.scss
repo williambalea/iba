@@ -48,6 +48,7 @@ footer {
 .accueil-body {
   max-width: 1000px;
   margin: auto;
+  padding-top: 32px;
   padding-bottom: 64px;
   background-color: #0e1111;
   text-align: center;
@@ -55,9 +56,34 @@ footer {
 
 .display-flex {
   display: flex;
-  justify-content: space-evenly;
   overflow-x: auto;
   text-align: center;
+  gap: 16px;
+  justify-content: space-between;
+  margin: 0px 16px;
+  padding-bottom: 6px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+// }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .card {
@@ -68,10 +94,11 @@ footer {
   border-radius: 10px;
   width: 150px;
   height: 150px;
-  margin: 16px;
+  // margin: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 
 .service-icon {
@@ -129,6 +156,7 @@ h3 {
 
   .accueil-body {
     text-align: left;
+    padding-top: 0px;
   }
 
   .contact {
