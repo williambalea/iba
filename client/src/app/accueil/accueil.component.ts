@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.scss']
 })
-export class AccueilComponent implements OnInit {
+export class AccueilComponent {
   heroImage: string;
-
+  
   images: string[] = [
     "cuisine",
     "cuisine2",
@@ -16,7 +17,10 @@ export class AccueilComponent implements OnInit {
     "salon2",
     "sdb"
   ]
-
+  
+  email = new FormControl('', [Validators.required, Validators.email]);
+  emailContent = new FormControl('', [Validators.required])
+  
   constructor() {
     const index: number = Math.floor(Math.random() * this.images.length);
     const image: string = this.images[index];
@@ -24,7 +28,13 @@ export class AccueilComponent implements OnInit {
     this.heroImage = `url('../../assets/heroImages/${image}.jpg')`
   }
 
-  ngOnInit(): void {
+
+  getErrorMessage(input: FormControl) {
+    if (input.hasError('required')) {
+      return 'Entrez une valeur';
+    }
+
+    return input.hasError('email') ? 'Adresse non valide' : '';
   }
 
 }

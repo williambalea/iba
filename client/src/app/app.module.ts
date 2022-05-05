@@ -3,20 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AccueilComponent } from './accueil/accueil.component';
 import { RejoindreComponent } from './rejoindre/rejoindre.component';
-
-import { MatButtonModule } from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
 
 import { KitchenSvgComponent } from '../assets/svg/kitchen/kitchen.component';
 import { doorSvgComponent } from '../assets/svg/door/door.component';
 import { sinkSvgComponent } from '../assets/svg/sink/sink.component';
 import { soumissionSvgComponent } from '../assets/svg/soumission/soumission.component';
 import { stairsSvgComponent } from '../assets/svg/stairs/stairs.component';
-
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -33,9 +30,9 @@ import { stairsSvgComponent } from '../assets/svg/stairs/stairs.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
