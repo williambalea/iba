@@ -44,9 +44,11 @@
             <div>Portes et fenêtres</div>
         </div>
     </div>
-    <div class="see-project">
-        <h3>Voir des projets</h3>
-        <mat-icon>arrow_forward</mat-icon>
+    <div class="see-projects">
+        <button routerLink="projets" mat-raised-button color="primary">
+            <span class="pr-1">Voir des projets</span>
+            <mat-icon>arrow_forward</mat-icon>
+        </button>
     </div>
     <div class="contact">
         <div class="flex-1">
@@ -58,19 +60,25 @@
             <div>RBQ : 5801 1313 01</div>
             <div>NEQ : 1176399724</div>
         </div>
+        <mat-divider vertical></mat-divider>
         <div class="email-form flex-2">
             <h2 class="pl-0">Envoyez-nous un courriel</h2>
+            <mat-form-field appearance="fill">
+                <mat-label>Votre nom</mat-label>
+                <input matInput>
+            </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Votre courriel</mat-label>
                 <input matInput placeholder="pat@example.com" [formControl]="email" required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage(this.email)}}</mat-error>
             </mat-form-field>
-
+            
             <mat-form-field appearance="fill">
                 <mat-label>Détaillez vos besoins</mat-label>
                 <textarea matInput [formControl]="emailContent" required></textarea>
                 <mat-error *ngIf="emailContent.invalid">{{getErrorMessage(this.emailContent)}}</mat-error>
             </mat-form-field>
+
             <div>
                 <button mat-raised-button color="primary">Envoyer</button>
             </div>

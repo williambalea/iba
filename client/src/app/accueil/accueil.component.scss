@@ -94,24 +94,6 @@ p {
   padding: 10px
 }
 
-.see-project {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 16px;
-  margin-bottom: 42px; // bugfix
-  background-color: #202020;
-  color: #fff;
-  padding: 10px;
-  box-shadow: 0px 1px 5px black;
-  border-radius: 4px;
-}
-
-.see-project:hover {
-  cursor: pointer;
-  background-color: #302f2f;
-}
-
 .contact {
   display: flex;
   margin: auto;
@@ -130,14 +112,6 @@ p {
 
 .pl-0 {
   padding-left: 0px;
-}
-
-h3 {
-  margin: 0;
-  margin-right: 10px;
-  padding: 0;
-  font-size: 16px;
-  font-weight: 500;
 }
 
 @media (orientation: portrait) {
@@ -161,7 +135,10 @@ h3 {
 
   .contact {
     margin: 24px;
+    padding: 0;
+    flex-direction: column;
   }
+
 }
 
 mat-toolbar {
@@ -176,4 +153,14 @@ mat-toolbar {
 
 textarea {
   height: 300px;
+}
+
+.pr-1 {
+  padding-right: 8px;
+}
+
+.see-projects {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
 }

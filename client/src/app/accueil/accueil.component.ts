@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-accueil',
@@ -21,7 +22,7 @@ export class AccueilComponent {
   email = new FormControl('', [Validators.required, Validators.email]);
   emailContent = new FormControl('', [Validators.required])
   
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     const index: number = Math.floor(Math.random() * this.images.length);
     const image: string = this.images[index];
     console.log(image)
@@ -29,7 +30,7 @@ export class AccueilComponent {
   }
 
 
-  getErrorMessage(input: FormControl) {
+  getErrorMessage(input: FormControl): string {
     if (input.hasError('required')) {
       return 'Entrez une valeur';
     }

@@ -14,6 +14,7 @@ import { sinkSvgComponent } from '../assets/svg/sink/sink.component';
 import { soumissionSvgComponent } from '../assets/svg/soumission/soumission.component';
 import { stairsSvgComponent } from '../assets/svg/stairs/stairs.component';
 import { MaterialModule } from './material/material.module';
+import { ProjetsComponent } from './projets/projets.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MaterialModule } from './material/material.module';
     sinkSvgComponent,
     soumissionSvgComponent,
     stairsSvgComponent,
+    ProjetsComponent,
   ],
   imports: [
     BrowserModule,
