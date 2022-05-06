@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-accueil',
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.scss']
 })
-export class AccueilComponent {
+export class AccueilComponent implements OnInit {
   heroImage: string;
+  imagesPosition: number;
   
   images: string[] = [
     "cuisine",
@@ -22,13 +22,24 @@ export class AccueilComponent {
   email = new FormControl('', [Validators.required, Validators.email]);
   emailContent = new FormControl('', [Validators.required])
   
-  constructor(private route: ActivatedRoute) {
-    const index: number = Math.floor(Math.random() * this.images.length);
-    const image: string = this.images[index];
-    console.log(image)
-    this.heroImage = `url('../../assets/heroImages/${image}.jpg')`
+  constructor() {
+    this.imagesPosition = Math.floor(Math.random() * this.images.length);
+    const image: string = this.images[this.imagesPosition];
+    this.heroImage = `url('../../assets/heroImages/${image}.jpg')`;
   }
 
+  ngOnInit(): void {
+    setInterval(() => this.imageCarousel(), 60000);
+  }
+
+  imageCarousel() {
+    console.log('hey');
+
+    this.imagesPosition++;
+    if (this.imagesPosition >= this.images.length) this.imagesPosition = 0;
+    const image: string = this.images[this.imagesPosition];
+    this.heroImage = `url('../../assets/heroImages/${image}.jpg')`;
+  }
 
   getErrorMessage(input: FormControl): string {
     if (input.hasError('required')) {
