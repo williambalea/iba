@@ -24,46 +24,56 @@
 
 
     <h2>Services</h2>
+    <div class="px-16 services-big-screen">
+        <mat-card class="blue-gradient flex-1 ratio-1 d-flex flex-center clip">
+            <img src="../../assets/svg/kitchen.component.svg" class="icon">
+            <span class="z1 icon-text">Cuisine</span>
+        </mat-card>
+        <mat-card class="red-gradient flex-1 ratio-1 d-flex flex-center clip">
+            <img src="../../assets/svg/sink.component.svg" class="icon">
+            <span class="z1 icon-text">Salle de bain</span>
+        </mat-card>
+        <mat-card class="green-gradient flex-1 ratio-1 d-flex flex-center clip">
+            <img src="../../assets/svg/stairs.component.svg" class="icon">
+            <span class="z1 icon-text">Sous-sol</span>
+        </mat-card>
+        <mat-card class="purple-gradient flex-1 ratio-1 d-flex flex-center clip">
+            <img src="../../assets/svg/door.component.svg" class="icon">
+            <span class="z1 icon-text">Portes et fenêtres</span>
+        </mat-card>
+    </div>
 
-    <mat-card class="test-card d-flex-col">
-        <img src="../../assets/heroImages/soumission.jpg" class="card-background">
-        <div class="flex-100 min-h0 z1">
-            <img src="../../assets/svg/soumission.component.svg" class="max-h100">
-        </div>
-        <b class="flex-0 z1 primary">Soumission gratuite</b>
-    </mat-card>
+    <div class="px-16 services-small-screen pb-10">
+        <mat-card class="blue-gradient flex-1 ratio-1 d-flex flex-center clip">
+            <img src="../../assets/svg/kitchen.component.svg" class="icon">
+            <span class="z1 icon-text">Cuisine</span>
+        </mat-card>
+        <mat-card class="red-gradient flex-1 ratio-1 d-flex flex-center clip">
+            <img src="../../assets/svg/sink.component.svg" class="icon">
+            <span class="z1 icon-text">Salle de bain</span>
+        </mat-card>
+    </div>
+    <div class="px-16 services-small-screen">
+        <mat-card class="green-gradient flex-1 ratio-1 d-flex flex-center clip">
+            <img src="../../assets/svg/stairs.component.svg" class="icon">
+            <span class="z1 icon-text">Sous-sol</span>
+        </mat-card>
+        <mat-card class="purple-gradient flex-1 ratio-1 d-flex flex-center clip">
+            <img src="../../assets/svg/door.component.svg" class="icon">
+            <span class="z1 icon-text">Portes et fenêtres</span>
+        </mat-card>
+    </div>
 
-    
-    <!-- <div class="display-flex">
-        <div class="card">
-            <soumission-svg class="service-icon" style="fill: rgb(202, 192, 48);"></soumission-svg>
-            <div>Soumission gratuite</div>
-        </div>
-        <div class="card">
-            <kitchen-svg class="service-icon" style="fill: rgb(49, 165, 165);"></kitchen-svg>
-            <div>Cuisine</div>
-        </div>
-        <div class="card">
-            <sink-svg class="service-icon" style="fill: coral;"></sink-svg>
-            <div>Salle de bain</div>
-        </div>
-        <div class="card">
-            <stairs-svg class="service-icon" style="fill: rgb(151, 76, 189);"></stairs-svg>
-            <div>Sous-sol</div>
-        </div>
-        <div class="card">
-            <door-svg class="service-icon" style="fill: palevioletred;"></door-svg>
-            <div>Portes et fenêtres</div>
-        </div>
-    </div> -->
+
     <div class="see-projects">
         <button routerLink="projets" mat-raised-button color="primary">
             <span class="pr-1">Voir des projets</span>
             <mat-icon>arrow_forward</mat-icon>
         </button>
     </div>
+
     <div class="contact">
-        <div class="flex-1">
+        <div class="flex-1 coord-text">
             <h2 class="pl-0">Coordonnées</h2>
             <div>IOSIF BALEA</div>
             <div><a href="tel:514-516-2856">514-516-2856</a></div>

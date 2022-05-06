@@ -139,7 +139,6 @@ p {
     padding: 0;
     flex-direction: column;
   }
-
 }
 
 mat-toolbar {
@@ -215,4 +214,99 @@ textarea {
 
 .primary {
   color: #004e98;
+}
+
+.blue-gradient {
+  background: rgb(9,9,121);
+  background: linear-gradient(155deg, rgba(9,9,121,0.7) 0%, rgba(0,212,255,0.7) 100%);
+  color: white;
+}
+
+.red-gradient {
+  background: rgb(121,9,43);
+  background: linear-gradient(155deg, rgba(121,9,43,0.7) 0%, rgba(255,110,0,0.7) 100%);
+  color: white;
+}
+
+.green-gradient {
+  background: rgb(66,121,9);
+  background: linear-gradient(155deg, rgba(66,121,9,0.7) 0%, rgba(0,255,157,0.7) 100%);
+  color: white;
+}
+
+.purple-gradient {
+  background: rgb(37,9,120);
+  background: linear-gradient(155deg, rgba(37,9,121,0.7) 0%, rgba(213,0,255,0.7) 100%);
+  color: white;
+}
+
+.d-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.ratio-1 {
+  aspect-ratio: 1 / 1;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.icon {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.4;
+  padding: 20px
+}
+
+.icon-text {
+  text-shadow: 0 0 7px #000;
+  font-size: 2.3em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.clip {
+  overflow-y: clip;
+}
+
+.color-black {
+  color: black;
+}
+
+.coord-text {
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+
+.services-small-screen {
+ display: none; 
+}
+
+.services-big-screen {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .services-small-screen {
+    display: flex;
+    gap: 10px;
+  }
+
+  .services-big-screen {
+    display: none;
+  }
+}
+
+.pb-10 {
+  padding-bottom: 10px;
 }
